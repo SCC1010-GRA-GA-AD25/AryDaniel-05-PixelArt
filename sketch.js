@@ -21,11 +21,17 @@ function setup() {
   botonGuardar.position((cols+1)*ancho,140)
   botonGuardar.mousePressed(guardarImagen)
   //botonGuardar.mousePressed(() => saveCanvas('pixelart','png'))
-
+  botonLimpiar = createButton('Limpiar')
+  botonLimpiar.position((cols+1)*ancho,180)
+  botonLimpiar.mousePressed(limpiarCanvas)
   background(255)
 }
 function guardarImagen() {
   saveCanvas('pixelart','png')
+}
+
+function limpiarCanvas() {
+  background(255)
 }
 
 function draw() {
