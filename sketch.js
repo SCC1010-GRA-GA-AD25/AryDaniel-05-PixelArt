@@ -17,8 +17,15 @@ function setup() {
   rengs = 32
   miSelector = createColorPicker()
   miSelector.position((cols+1)*ancho,100)
+  botonGuardar = createButton('Guardar')
+  botonGuardar.position((cols+1)*ancho,140)
+  botonGuardar.mousePressed(guardarImagen)
+  //botonGuardar.mousePressed(() => saveCanvas('pixelart','png'))
 
   background(255)
+}
+function guardarImagen() {
+  saveCanvas('pixelart','png')
 }
 
 function draw() {
